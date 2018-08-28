@@ -27,6 +27,16 @@ export class AboutComponent implements OnInit {
     });
    }
 
+  btnClicked() {
+    debugger;
+    this.angulartics2.eventTrack.next({
+      action: 'buttonClicked',
+      properties: { category: 'testCategory'}
+    });
+
+    console.log('event fired');
+ }
+
   ngOnInit() {
 
   }
